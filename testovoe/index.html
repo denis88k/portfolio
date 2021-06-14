@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>testImperium</title>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="container">
+        <div class="header__inner">
+
+          <div class="header__images">
+
+            <img class="header__img" src="images/img1.jpg" alt="">
+            <img class="header__img" src="images/img2.jpg" alt="">
+            <img class="header__img" src="images/img3.jpg" alt="">
+
+          </div>
+          <div class="swiper-container">
+
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <img class="header__img" src="images/img1.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img class="header__img" src="images/img2.jpg" alt="">
+              </div>
+              <div class="swiper-slide">
+                <img class="header__img" src="images/img3.jpg" alt="">
+              </div>
+
+
+            </div>
+          </div>
+
+          <div class="header__info">
+
+            <div class="header__name-complex">
+              <div class="header__name-title title">
+                ЖК «‎‎Времена года»‎
+              </div>
+              <p class="header__name-subtitle">
+                Приволжский район
+              </p>
+            </div>
+
+            <div class="header__price-about">
+
+              <div class="header__price subtitle">
+                от 3 700 000 ₽
+              </div>
+
+              <div class="header__credit">
+                от 74 980 ₽ за м²
+              </div>
+
+              <div class="header__mortgage">
+                в ипотеку от 10 770 ₽/мес
+              </div>
+
+              <div class="header__about-title subtitle">
+                Описание ЖК
+              </div>
+              <p class="header__about-text">
+                Находится всего в 17 минутах от центра в прекрасном озелененном районе рядом с лесопосадочной зоной.
+                Экология, комфорт и безопасность – важные составляющие проекта. Важный плюс – транспортная
+                доступность. За несколько минут можно доехать по Оренбургскому тракту до Проспекта Победы и других
+                крупных магистралей. 15 минут займет дорога до аэропорта.Дом без машин — еще одно преимущество ЖК
+                «Времена года». Каждый хочет жить в зеленом дворе, свободном от выхлопных газов.
+              </p>
+              <div class="header__about-deadline">
+                <span>Срок сдачи:</span>
+                <span>4 кв. 2020 г. - 3 кв. 2021 г.</span>
+              </div>
+              <div class="header__about-developer">
+                <span>Застройщик:</span>
+                <span>Суварстроит</span>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <section class="select__filter">
+        <div class="container">
+
+          <div class="select__inner">
+
+            <div class="select__title title">
+              Выбор квартиры
+            </div>
+
+            <div class="filter">
+
+              <div class="filter__room">
+
+                <div class="filter__title">
+                  Комнатность
+                </div>
+
+                <div class="filter__room-select">
+
+                  <label class="filter__room-1">
+                    <input class="filter__room-1ch checkbox" type="checkbox">
+                    <span class="filter__room-1text filter__room-text">1</span>
+                  </label>
+
+                  <label class="filter__room-2">
+                    <input class="filter__room-2ch checkbox" type="checkbox">
+                    <span class="filter__room-2text filter__room-text">2</span>
+                  </label>
+
+                  <label class="filter__room-3">
+                    <input class="filter__room-3ch checkbox" type="checkbox">
+                    <span class="filter__room-3text filter__room-text">3</span>
+                  </label>
+
+                  <label class="filter__room-4">
+                    <input class="filter__room-4ch checkbox" type="checkbox">
+                    <span class="filter__room-4text filter__room-text">4+</span>
+                  </label>
+
+                  <label class="filter__room-all">
+                    <input class="filter__room-allch checkbox" type="checkbox">
+                    <span class="filter__room-alltext filter__room-text">Все</span>
+                  </label>
+
+                </div>
+              </div>
+
+              <div class="filter__floor">
+                <div class="filter__title">
+                  Этаж
+                </div>
+                <div class="filter__floor-select">
+
+                  <select class="filter__floor-list">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option selected value="10">10</option>
+                  </select>
+
+                </div>
+              </div>
+
+              <div class="filter__square">
+                <div class="filter__title">
+                  Площадь(м²)
+                </div>
+                <div class="filter__square-select">
+
+                  <label class="filter__square-label">
+                    <span class="filter__square-text">От</span>
+                    <input class="filter__square-input" type="number" min="32.47" max="60.88" placeholder="32.47">
+                  </label>
+
+                  <label class="filter__square-label">
+                    <span class="filter__square-text">До</span>
+                    <input class="filter__square-input" type="number" min="32.47" max="60.88" placeholder="60.88">
+                  </label>
+
+                </div>
+              </div>
+
+              <a class="select-btn btn-price" href="#">
+                Узнать стоимость
+              </a>
+
+            </div>
+
+            <a class="filter-reset">
+              Сбросить все фильтры
+            </a>
+
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <section class="select__result">
+        <!-- таблица с квартирами -->
+        <div class="container">
+
+          <div class="select__result-inner">
+
+            <div class="result-find">
+              По вашему запросу найдено:
+              <span>3 квартир</span>
+            </div>
+            <div class="result__view result__view-col">
+              Переключить вид:
+              <label class="result__view-label">
+                <span class="result__view-icon"></span>
+              </label>
+            </div>
+
+            <div class="result__table result__horizont">
+
+              <ul class="table__items">
+                <li class="table__item row1">Номер дома</li>
+                <li class="table__item row2">Кол-во комнат</li>
+                <li class="table__item row3">Этаж</li>
+                <li class="table__item row4">от 32.47 до 60.88</li>
+                <li class="table__item row5">Посмотреть планировку и характеристику</li>
+              </ul>
+
+              <div class="table__flats">
+
+                <ul class="table__flat">
+
+                  <li class="table__flat-item row1">№1</li>
+                  <div class="column-row-row">
+                    <li class="table__flat-item row2">1-комнатная </li>
+                    <li class="table__flat-item row3">10</li>
+                    <li class="table__flat-item column-row-h">2</li>
+                  </div>
+                  <li class="table__flat-item row4">32.47</li>
+                  <li class="table__flat-item row5">
+                    <span class="item-eye"></span>
+                    <a class="item-dwnl" href="#">Скачать планировку</a>
+                    <a class="item-detail" href="#">Подробнее</a>
+                  </li>
+                  <li class="table__flat-item">
+                    <a class="flat-btn btn-price" href="#">
+                      Узнать стоимость
+                    </a>
+                  </li>
+
+                </ul>
+
+                <ul class="table__flat">
+
+                  <li class="table__flat-item row1">№1</li>
+                  <div class="column-row-row">
+                    <li class="table__flat-item row2">1-комнатная </li>
+                    <li class="table__flat-item row3">10</li>
+                    <li class="table__flat-item column-row-h">2</li>
+                  </div>
+                  <li class="table__flat-item row4">33.60</li>
+                  <li class="table__flat-item row5">
+                    <span class="item-eye"></span>
+                    <a class="item-dwnl" href="#">Скачать планировку</a>
+                    <a class="item-detail" href="#">Подробнее</a>
+                  </li>
+                  <li class="table__flat-item">
+                    <a class="flat-btn btn-price" href="#">
+                      Узнать стоимость
+                    </a>
+                  </li>
+
+                </ul>
+
+                <ul class="table__flat">
+
+                  <li class="table__flat-item row1">№2</li>
+                  <div class="column-row-row">
+                    <li class="table__flat-item row2">1-комнатная </li>
+                    <li class="table__flat-item row3">10</li>
+                    <li class="table__flat-item column-row-h">2</li>
+                  </div>
+                  <li class="table__flat-item row4">34.70</li>
+                  <li class="table__flat-item row5">
+                    <span class="item-eye"></span>
+                    <a class="item-dwnl" href="#">Скачать планировку</a>
+                    <a class="item-detail" href="#">Подробнее</a>
+                  </li>
+                  <li class="table__flat-item">
+                    <a class="flat-btn btn-price" href="#">
+                      Узнать стоимость
+                    </a>
+                  </li>
+
+                </ul>
+
+
+              </div>
+
+              <a class="table__btn-col-h">
+                Загрузить еще
+              </a>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <section class="home-about">
+        <!-- характеристики дома -->
+        <div class="container">
+          <div class="home-about__inner">
+
+            <div class="home-about__title title">
+              Характеристики дома
+            </div>
+
+            <div class="home-about__column">
+              <div class="home-about__items-title">
+                О жилом комплексе
+              </div>
+
+              <ul class="home-about__items columns-items">
+
+                <li class="home-about__item">
+                  <span>Вид ремонта</span>
+                  <span>Улучшенная черновая отделка</span>
+                </li>
+
+                <li class="home-about__item">
+                  <span>Остекленение балконов</span>
+                  <span>Есть</span>
+                </li>
+                <li class="home-about__item">
+                  <span>Материал окон</span>
+                  <span>Пластиковые</span>
+                </li>
+                <li class="home-about__item">
+                  <span>Проведение коммуникаций</span>
+                  <span>Телефон, интернет, кабельное</span>
+                </li>
+                <li class="home-about__item">
+                  <span>Регуляторы тепла</span>
+                  <span>Есть</span>
+                </li>
+                <li class="home-about__item">
+                  <span>Железная дверь</span> <span>Есть</span>
+                </li>
+                <li class="home-about__item">
+                  <span>Счетчики электричества</span>
+                  <span>Есть</span>
+                </li>
+                <li class="home-about__item">
+                  <span>Счетчики воды</span>
+                  <span>Есть</span>
+                </li>
+                <li class="home-about__item">
+                  <span>Пассажирский лифт</span>
+                  <span>Есть</span>
+                </li>
+                <li class="home-about__item">
+                  <span>Счетчики тепла</span> <span>Есть</span>
+                </li>
+                <li class="home-about__item">
+                  <span>Колясочная</span> <span>Есть</span>
+                </li>
+                <li class="home-about__item">
+                  <span>Пандус</span>
+                  <span>Есть</span>
+                </li>
+
+              </ul>
+
+            </div>
+
+            <div class="home-about__column home-about__m">
+              <div class="home-about__items-title">
+                О дворе
+              </div>
+              <ul class="home-about__items">
+                <li class="home-about__item">
+                  <span>Открытый двор</span>
+                  <span>Есть</span>
+                </li>
+                <li class="home-about__item">
+                  <span>Количество машиномест</span>
+                  <span>200</span>
+                </li>
+                <li class="home-about__item">
+                  <span>Наземный паркинг</span>
+                  <span>Есть</span>
+                </li>
+                <li class="home-about__item">
+                  <span>Детская площадка</span>
+                  <span>Песочница, качели</span>
+                </li>
+                <li class="home-about__item">
+                  <span>Спортивная площадка</span>
+                  <span>Есть</span>
+                </li>
+
+              </ul>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="location">
+        <div class="container">
+          <div class="location__inner">
+            <div class="location__title title">Расположение</div>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d71907.29232558457!2d49.189191488621944!3d55.721964145029986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x415ead1796d10b5f%3A0xba6e131086628682!2z0JbQmiDQktGA0LXQvNC10L3QsCDQs9C-0LTQsA!5e0!3m2!1sru!2sru!4v1623502767313!5m2!1sru!2sru"
+              width="100%" height="385" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
+        </div>
+      </section>
+
+    </main>
+    <footer class="footer">
+      <div class="container">
+
+        <div class="footer__inner">
+
+          <div class="footer__column">
+
+            <div class="footer__doc footer-bottom">
+              Документы
+            </div>
+            <div class="footer__map-site footer-bottom">
+              Карта сайта
+            </div>
+            <div class="footer__copyright">
+              © Центральное агентство недвижимости, 2000-2020
+            </div>
+
+          </div>
+
+          <div class="footer__column">
+
+            <div class="footer__location footer-bottom">
+              г. Казань, ул. Шуртыгина 3, оф. 25
+            </div>
+            <a class="footer__mail" href="mailto:an.cantr@mail.ru">an.cantr@mail.ru</a>
+
+          </div>
+
+          <a class="footer__phone" href="tel:+78432531777">+7(843)253-17-77</a>
+
+          <div class="footer__social">
+            <span class="footer__social-icon footer__social-icon-fb">
+              <img src="" alt="">
+            </span>
+            <span class="footer__social-icon footer__social-icon-inst">
+              <img src="" alt="">
+            </span>
+            <span class="footer__social-icon footer__social-icon-vk">
+              <img src="" alt="">
+            </span>
+          </div>
+
+        </div>
+
+      </div>
+    </footer>
+  </div>
+
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
