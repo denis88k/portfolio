@@ -1,0 +1,40 @@
+.footer {
+	background-color: #f7f7f7;
+	&__body{
+		display: flex;
+		@include adaptiv-value-to("padding-top", 100, 50, 500);
+		@include adaptiv-value-to("padding-bottom", 100, 50, 500);
+	}
+	&__column {
+		flex: 0 1 33.333%;
+	}
+	&__social{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}
+.contact {
+	color: #848789;
+	font-size: 14px;
+	line-height: 18px;
+}
+.social {
+	&__link{
+		padding: 0 7.5px;
+	}
+}
+.label {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	&__text {
+		color: #848789;
+		font-size: 14px;
+		font-style: italic;
+		padding-right: 9px;
+	}
+	&__icon{
+		display: block;
+	}
+}

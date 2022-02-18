@@ -1,0 +1,55 @@
+html,
+body {
+	height: 100%;
+	min-width: 320px;
+}
+
+body{
+	font-family: 'Lato', sans-serif;
+	&.lock {
+		overflow: hidden;
+	}
+}
+//переменные
+$minwidth: 320px;
+$pd: 30px;
+$maxWidth: 1600;
+$maxWidthContainer: 1110;
+$md1: $maxWidthContainer + $pd;
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.container{
+	max-width: $md1;
+	margin: 0 auto;
+	padding: 0 calc($pd/2);
+}
+
+.main {
+	flex: 1 1 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
+
+.ibg{
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+.ibg img{
+	width: 0;
+	height: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	visibility: hidden;
+}
