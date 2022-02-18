@@ -1,0 +1,122 @@
+//footer
+.footer{
+   color: $white;
+   font-size: 11px;
+   letter-spacing: .85px;
+   &__copyright{
+      background-color: #171819;  
+   }
+   &__copyright-inner{
+      line-height: 13px;
+      text-align: center;
+      padding: 22px 10px;
+   }
+}
+.info{
+   background-color: #141A20;
+   &__inner{      
+   color: $white;
+   font-size: 11px;
+   font-weight: 400;
+   letter-spacing: .85px;
+   display: flex;
+   padding: 42px 0 50px 0;
+   }
+   &__title{
+      line-height: 13px;
+      display: inline-block;
+   }
+   &__company{
+      max-width: 250px;
+      margin-right: 71px;
+   }
+   &__links{
+      max-width: 262px;
+      height: 150px;
+      margin-right: 58px;
+   }
+   &__contact{
+      max-width: 141px;
+      height: 158px;
+      margin-right: 46px;
+      color: inherit;
+   }
+   &__social{
+      max-width: 87px;
+      height: 13px;
+   }
+}
+.company{
+   &__title{
+      margin-bottom: 19px;
+      display: block;
+   }
+   &__logo{
+      margin-bottom: 15px;
+      display: inline-block;
+   }
+   &__text{
+      line-height: 19px;
+   }
+}
+.links{
+   &-title{
+      margin-bottom: 10px;
+   }
+   &-items{
+      display: flex;
+   }
+   &-item{
+      font-style: normal;
+      font-weight: 600;
+      line-height: 25px;
+   }
+   &-item:not(:last-child){
+      margin-right: 36px;
+   }
+}
+.link-item:nth-child(1){
+   width: 77px;
+}
+.contact{
+   &__title, &__address, &__phone{
+      margin-bottom: 15px;
+      display: inline-block;
+   }
+   &__address, &__phone, &__mail{
+      line-height: 16px;
+   }
+   &__address{
+      font-style: normal;
+   }
+}
+.item-link, .contact__mail, .contact__phone{
+   color: inherit;
+}
+.social{
+   &__links{
+      display: flex;
+      margin-top: 30px;
+   }
+   &__item:not(:last-child){
+      margin-right: 25px;
+   }
+   &__link{
+      width: 13px;
+      height: 13px;
+      display: inline-block;
+      mask-size: cover;
+      mask-repeat: no-repeat;
+      mask-position: center;
+      background: $white;
+   }
+   &__link-fb{
+      mask-image: url(../images/fb.svg);
+   }
+   &__link-tw{
+      mask-image: url(../images/tw.svg);
+   }
+   &__link-g{
+      mask-image: url(../images/g.svg);
+   }
+}

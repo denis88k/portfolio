@@ -1,0 +1,43 @@
+.header{
+      background: url(../images/header-bg.png) no-repeat center top/cover;
+      min-height: 100vh;
+      &__inner{
+        color: $white;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+      }
+      &__logo{
+        margin-top: 41px;
+      }
+      &__title{
+        font-family: 'Bebas Neue', cursive;
+        font-size: 42px;   
+        font-weight: 700; 
+        line-height: 60px; 
+        letter-spacing: 5.71px;
+        text-transform: uppercase;
+      }
+      &__subtitle{
+        font-size: 15px;
+        line-height: 21.79px;
+      }
+      &__center{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      &__scroll{
+        font-size: 11px;
+        letter-spacing: 3.71px;
+        line-height: 15px;
+        text-transform: uppercase;
+        margin-bottom: 71px;
+      }
+}
+.logo-wh{
+  @extend %logo;
+}
