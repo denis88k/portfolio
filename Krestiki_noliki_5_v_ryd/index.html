@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Игра Крестики-Нолики пять-в-ряд</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <div class="window-start">
+      <div class="container">
+        <div class="window-start__inner">
+
+          <h1 class="name-game">Игра Крестики-Нолики пять-в-ряд</h1>
+          <label class="label-window-start">
+            Введите размер поля NxN:
+            <input class="numbCells-start input" type="number" value="5" min="5"></input>
+          </label>
+          <button class="btn-start-game btn">Начать игру</button>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="window-game">
+      <div class="container">
+        <div class="window-game__inner">
+
+          <div class="window-game__nav">
+
+            <div class="window-game__nav-item">
+              <label class="label-window-game">
+                Размер поля:
+                <input class="numbCells input" type="number" value="5" min="5"></input>
+              </label>
+
+              <button class="btn-start-new btn">Начать заного</button>
+            </div>
+
+            <div class="window-game__nav-item currentPlayer">
+              <div>Сейчас ходит: <span id="curPlyr">X</span></div>
+              <button class="btn-reset btn">Очистить поле</button>
+            </div>
+
+            <div class="window-game__nav-item stat">
+              <div class="stat__name">Статистика</div>
+              <div class="stat__gamers">
+                <div class="stat__gamer">
+                  <span>X</span>
+                  <span id="sX">0</span>
+                </div>
+                <div class="stat__gamer">
+                  <span>O</span>
+                  <span id="sO">0</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="field">
+
+          </div>
+
+          <div class="modal">
+            <div class="modalWind">
+              afd
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
