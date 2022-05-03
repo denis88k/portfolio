@@ -1,0 +1,104 @@
+.direct {
+	@include bgImg(3-direct, bg, png);
+
+	.container {
+		margin-bottom: -40px;
+	}
+
+	&__title {
+		@include adaptiv-value-in-min(margin-top, 90, 40, 1920, 320);
+		@include adaptiv-value-in-min(margin-bottom, 55, 40, 1920, 320);
+		margin-left: auto;
+		margin-right: auto;
+		@include mwidth(1050);
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 41px;
+	}
+
+	&__item {
+		background-color: var(--white);
+		border-radius: 4px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@include adaptiv-value(padding-top, 45, 35, 0);
+		@include adaptiv-value(padding-bottom, 54, 44, 0);
+		@include adaptiv-value(padding-left, 33, 23, 0);
+		@include adaptiv-value(padding-right, 33, 23, 0);
+		@include mwidth(354);
+	}
+
+	&__item:nth-child(2),
+	&__item:nth-child(3) {
+		.direct__item-title {
+			@include adaptiv-value(margin-bottom, 80, 40, 0);
+		}
+	}
+
+	&__item-title {
+		@include fontGothamB();
+		@include adaptiv-value(font-size, 24, 20, 0);
+		@include adaptiv-value(margin-bottom, 45, 25, 0);
+	}
+
+	&__item-list {
+		@include adaptiv-value(font-size, 18, 15, 0);
+	}
+
+	&__item-item {
+		position: relative;
+		margin-left: 66px;
+
+		span {
+			@include fontGothamB();
+			@include adaptiv-value(font-size, 30, 24, 0);
+		}
+	}
+
+	&__item-item:not(:last-child) {
+		@include adaptiv-value(margin-bottom, 40, 30, 0);
+	}
+
+	&__item-item::before {
+		position: absolute;
+		content: '';
+		left: -66px;
+		top: 7px;
+	}
+
+	&__item-item:nth-child(1)::before {
+		@include bgImg(3-direct, coins-red, png);
+		width: 37px;
+		height: 36px;
+	}
+
+	&__item-item:nth-child(2)::before {
+		@include bgImg(3-direct, receipt, png);
+		width: 31px;
+		height: 31px;
+	}
+
+	&__item-item:nth-child(3)::before {
+		@include bgImg(3-direct, shopping, png);
+		width: 34px;
+		height: 34px;
+	}
+
+	&__text {
+		text-align: center;
+		color: var(--white);
+		@include adaptiv-value(margin-top, 54, 35, 0);
+		@include adaptiv-value(margin-bottom, 54, 35, 0);
+		@include adaptiv-value(font-size, 24, 18, 0);
+		@include adaptiv-value(line-height, 36, 25, 0);
+
+		span {
+			@include fontGothamB();
+		}
+	}
+}

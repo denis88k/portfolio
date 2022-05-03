@@ -1,0 +1,19 @@
+@media screen and (max-width: 1250px) {
+   .steps {
+      &__lists::before {
+         display: none;
+      }
+
+      @for $item from 1 through 8 {
+         &__item:nth-child(#{$item}) {
+            order: 1;
+         }
+      }
+   }
+}
+
+@media screen and (max-width: 540px) {
+   .steps__lists {
+      flex-direction: column;
+   }
+}

@@ -1,0 +1,84 @@
+.specific {
+	position: relative;
+
+	&::after {
+		position: absolute;
+		content: '';
+		@include bgImg(2-specific, iphone-bg-right, png);
+		top: 119px;
+		@include adaptiv-value-in-min(right, 0, -590, 1750, 1000);
+		@include mwidth(868);
+		height: 856px;
+	}
+
+	&__inner {
+		@include adaptiv-value-in-min(padding-top, 165, 70, 750, 320);
+		@include adaptiv-value-in-min(padding-bottom, 105, 50, 750, 320);
+	}
+
+	&__content {
+		@include mwidth(572);
+	}
+
+	&__title {
+		color: var(--black);
+		text-align: left;
+	}
+
+	&__text {
+		@include adaptiv-value-in-min(margin-top, 55, 45, 750, 320);
+		@include adaptiv-value-in-min(margin-bottom, 98, 45, 750, 320);
+	}
+
+	&__subtitle-requests {
+		margin: 0 auto 46px;
+		@include mwidth(850);
+	}
+
+	&__items-requests {
+		display: flex;
+		flex-wrap: wrap;
+		column-gap: 15px;
+		row-gap: 30px;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		@include mwidth(240);
+		margin-left: 34px;
+		position: relative;
+	}
+
+	&__item::before {
+		position: absolute;
+		content: attr(data-n);
+		transform: rotate(-90deg);
+		@include fontGothamR();
+		font-size: 20px;
+		line-height: 1.2;
+		left: -34px;
+		top: 25%;
+	}
+
+	&__item-img {
+		margin-bottom: 26px;
+	}
+
+	&__item-text {
+		font-size: 16px;
+		line-height: 26px;
+	}
+
+	&__subtitle-brands {
+		margin: 98px auto 45px;
+	}
+
+	&__items-brands {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		column-gap: 10px;
+		row-gap: 20px;
+	}
+}

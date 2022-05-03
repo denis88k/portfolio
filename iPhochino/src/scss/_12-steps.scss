@@ -1,0 +1,163 @@
+.steps {
+
+   &__title {
+      color: var(--black);
+   }
+
+   &__subtitle {
+      @include mwidth(1000);
+      @include adaptiv-value(margin-top, 40, 20, 1);
+      @include adaptiv-value(margin-bottom, 50, 30, 1);
+      @include adaptiv-value(font-size, 24, 18, 1);
+      @include adaptiv-value(line-height, 36, 26, 1);
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   &__lists {
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 60px;
+      row-gap: 30px;
+      justify-content: center;
+      position: relative;
+
+      &::before {
+         position: absolute;
+         content: '';
+         @include bgImg(12-steps, bg, png);
+         @include mwidth(1087);
+         height: 389px;
+         top: 75px;
+         right: -50px;
+      }
+   }
+
+   &__item {
+      @include adaptiv-value(line-height, 26, 18, 1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 190px;
+      position: relative;
+
+      span:nth-child(1) {
+         @include adaptiv-value(font-size, 24, 18, 1);
+         color: var(--red);
+         @include fontGothamB();
+      }
+
+      p {
+         @include adaptiv-value(font-size, 18, 15, 1);
+
+         text-align: center;
+      }
+
+      p+span {
+         @include fontGothamB();
+         @include adaptiv-value(font-size, 18, 15, 1);
+      }
+   }
+
+   &__item::before {
+      position: absolute;
+      content: '';
+      top: 0;
+   }
+
+   &__item:nth-child(1),
+   &__item:nth-child(2),
+   &__item:nth-child(4),
+   &__item:nth-child(5),
+   &__item:nth-child(8) {
+      &::before {
+         width: 162px;
+         height: 163px;
+      }
+   }
+
+   &__item:nth-child(1),
+   &__item:nth-child(2),
+   &__item:nth-child(4),
+   &__item:nth-child(8) {
+      p {
+         @include mwidth(220);
+      }
+   }
+
+   &__item:nth-child(5) p {
+      @include mwidth(210);
+   }
+
+   &__item:nth-child(6) p {
+      @include mwidth(235);
+   }
+
+   &__item:nth-child(7) p {
+      @include mwidth(245);
+   }
+
+   &__item:nth-child(3) {
+      p {
+         @include mwidth(241);
+      }
+
+      &::before {
+         width: 157px;
+         height: 163px;
+      }
+   }
+
+   &__item:nth-child(6),
+   &__item:nth-child(7) {
+      &::before {
+         width: 175px;
+         height: 171px;
+      }
+   }
+
+   @for $item from 1 through 4 {
+      &__item:nth-child(#{$item}) {
+         order: 1;
+      }
+   }
+
+   @for $item from 5 through 9 {
+      &__item:nth-child(#{$item}) {
+         order: #{9 - $item};
+      }
+   }
+
+
+   @for $item from 1 through 8 {
+      &__item:nth-child(#{$item})::before {
+         @include bgImg(12-steps, #{$item}, png);
+      }
+   }
+
+   &__info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: var(--grey-light);
+      @include adaptiv-value(margin-top, 55, 30, 1);
+      @include adaptiv-value(margin-bottom, 65, 40, 1);
+      padding: 0 10px;
+
+      h3 {
+         @include fontGothamB();
+         @include adaptiv-value(font-size, 30, 24, 1);
+         @include adaptiv-value(margin-top, 60, 30, 1);
+         margin-bottom: 25px;
+         text-align: center;
+      }
+   }
+
+   &__info-btn {
+      @include adaptiv-value(margin-bottom, 65, 40, 1);
+      margin-left: auto;
+      margin-right: auto;
+      @include mwidth(355);
+   }
+}

@@ -1,0 +1,22 @@
+@media screen and (max-width: 944px){
+	.gratitude__founder {
+			display: none;
+	}
+}
+@media screen and (max-width: 702px){
+	.work-time__img{
+		transform: translateX(calc(-382px + (0 - (-382)) * ((100vw - 320px) / (702 - 320))));
+	}
+}
+@media screen and (max-width: 648px){
+	.gratitude__title{
+		br{
+			display: none;
+		}
+	}
+}
+@media screen and (max-width: 450px){
+	.gratitude__inner{
+		margin-top: 20px;
+	}
+}

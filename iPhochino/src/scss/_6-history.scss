@@ -1,0 +1,102 @@
+.history {
+	@include bgImg(6-history, bg, jpg);
+
+	&__inner {
+		@include adaptiv-value(margin-top, 90, 50, 1);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		box-shadow: 0px 38px 111px 0 rgb(0 0 0 / 8%);
+		position: relative;
+		z-index: 10;
+	}
+
+	&__title {
+		@include mwidth(1087);
+	}
+
+	&__subtitle {
+		@include mwidth(855);
+		@include adaptiv-value(font-size, 24, 18, 1);
+		@include adaptiv-value(line-height, 36, 24, 1);
+		color: var(--white);
+		text-align: center;
+		@include adaptiv-value(margin-top, 45, 30, 1);
+		@include adaptiv-value(margin-bottom, 20, 5, 1);
+	}
+
+	&__content {
+		border-radius: 15px;
+		background-color: var(--white);
+		width: 100%;
+		padding: 0 10px;
+		position: relative;
+		top: 40px;
+		z-index: 10;
+	}
+
+	&__content-title {
+		@include adaptiv-value(margin-top, 50, 30, 1);
+		@include adaptiv-value(margin-bottom, 40, 25, 1);
+	}
+
+	&__content-items {
+		@include adaptiv-value(margin-bottom, 60, 40, 1);
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 30px;
+	}
+
+	&__content-item {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		padding-left: 190px;
+		position: relative;
+		height: 176px;
+		@include mwidth(456);
+		@include adaptiv-value(font-size, 18, 16, 0);
+		@include adaptiv-value(line-height, 26, 20, 0);
+
+		span {
+			@include fontGothamB();
+			@include adaptiv-value(font-size, 30, 24, 0);
+			@include adaptiv-value(line-height, 42, 30, 0);
+		}
+	}
+
+	&__content-item::before {
+		position: absolute;
+		content: '';
+		width: 162px;
+		left: 0;
+	}
+
+	&__content-item:nth-child(1)::before {
+		@include bgImg(6-history, phone, png);
+		height: 176px;
+	}
+
+	&__content-item:nth-child(2)::before {
+		@include bgImg(6-history, center, png);
+		height: 162px;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	.history {
+		&__content-item {
+			padding-left: 0;
+			padding-top: 190px;
+			height: auto;
+			align-items: center;
+			text-align: center;
+		}
+
+		&__content-item::before {
+			top: 0;
+			left: auto;
+		}
+	}
+}

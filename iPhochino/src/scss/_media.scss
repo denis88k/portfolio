@@ -1,0 +1,21 @@
+@media screen and (max-width: 910px){
+	.header{
+		&__text{
+			display: none;
+		}
+	}
+}
+@media screen and (max-width: 450px){
+	.header{
+		&__inner{
+			flex-direction: column;
+			gap: 20px;
+		}
+		&__text{
+			display: block;
+		}
+	}
+	.bg-black{
+		padding-top: 278px;
+	}
+}

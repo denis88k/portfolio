@@ -1,0 +1,65 @@
+.call {
+   @include bgImg(14-call, bg1, jpg);
+   height: 100%;
+   width: 100%;
+   position: relative;
+
+   &__title {
+      @include adaptiv-value(margin-top, 90, 50, 1);
+      color: var(--black);
+   }
+
+   .form__title span:nth-child(1) {
+      @include fontGothamB();
+   }
+
+   &__subtitle {
+      text-align: center;
+      @include adaptiv-value(margin-top, 40, 20, 1);
+      @include adaptiv-value(margin-bottom, 50, 30, 1);
+      @include adaptiv-value(font-size, 24, 18, 1);
+      @include adaptiv-value(line-height, 36, 26, 1);
+   }
+
+   &__lists {
+      @include adaptiv-value(margin-bottom, 60, 30, 1);
+      display: flex;
+      justify-content: center;
+      gap: 70px;
+      flex-wrap: wrap;
+   }
+
+   &__item:nth-child(1),
+   &__item:nth-child(2) {
+      width: 254px;
+   }
+
+   &__item:nth-child(3) {
+      width: 280px;
+   }
+
+   &__item-text {
+      @include adaptiv-value(font-size, 18, 15, 1);
+      @include adaptiv-value(line-height, 26, 22, 1);
+      padding-top: 100px;
+      position: relative;
+
+      &::before {
+         position: absolute;
+         content: '';
+         width: 75px;
+         height: 75px;
+         top: 0;
+      }
+   }
+
+   @for $item from 1 through 3 {
+      &__item:nth-child(#{$item}) &__item-text::before {
+         @include bgImg(14-call, #{$item}, png);
+      }
+   }
+
+   &___form {
+      margin-bottom: 30px;
+   }
+}

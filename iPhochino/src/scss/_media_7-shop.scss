@@ -1,0 +1,11 @@
+@media screen and (max-width: 774px) {
+   .shop__inner {
+      flex-direction: column;
+   }
+
+   .shop__lists {
+      order: 1;
+      margin-top: 30px;
+      align-self: center;
+   }
+}

@@ -1,0 +1,156 @@
+.reasons {
+	position: relative;
+
+	&::after {
+		position: absolute;
+		content: '';
+		@include bgImg(5-reasons, phone-right, png);
+		top: 230px;
+		@include adaptiv-value-in-min(top, 230, 150, 1760, 850);
+		@include adaptiv-value-in-min(right, 0, -590, 1760, 850);
+		@include mwidth(961);
+		height: 643px;
+		z-index: 10;
+	}
+
+	&__title {
+		@include adaptiv-value(margin-top, 90, 50, 0);
+		@include adaptiv-value(margin-bottom, 50, 20, 0);
+		color: var(--black);
+	}
+
+	&__content {
+		display: flex;
+		align-items: flex-end;
+	}
+
+	&__content-left {
+		@include mwidth(530);
+	}
+
+	&__content-right {
+		@include mwidth(570);
+	}
+
+	&__content-text {
+		@include adaptiv-value(font-size, 18, 14, 0);
+		@include adaptiv-value(line-height, 26, 20, 0);
+
+		span {
+			@include fontGothamB();
+			@include adaptiv-value(font-size, 30, 24, 0);
+			@include adaptiv-value(line-height, 26, 20, 0);
+		}
+	}
+
+	&__content-subtitle {
+		@include fontGothamB();
+		@include adaptiv-value(font-size, 30, 24, 0);
+		@include adaptiv-value(line-height, 42, 30, 0);
+		@include adaptiv-value(margin-top, 100, 30, 0);
+		@include adaptiv-value(margin-bottom, 25, 20, 0);
+	}
+
+	&__content-img img {
+		margin: 0 auto;
+	}
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		gap: 20px;
+		@include adaptiv-value(margin-top, 100, 70, 0);
+		@include adaptiv-value-in-min(margin-bottom, 260, 170, 900, 320);
+	}
+
+	&__item {
+		@include mwidth(556);
+		@include adaptiv-value(font-size, 18, 16, 0);
+		@include adaptiv-value(line-height, 26, 20, 0);
+
+		span {
+			@include fontGothamB();
+			@include adaptiv-value(font-size, 30, 24, 0);
+			@include adaptiv-value(line-height, 42, 30, 0);
+		}
+
+		padding-left: 190px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		position: relative;
+		height: 171px;
+	}
+
+	&__item::before {
+		position: absolute;
+		content: '';
+		width: 162px;
+		left: 0;
+	}
+
+	&__item:nth-child(1):before {
+		@include bgImg(5-reasons, 1, png);
+		height: 171px;
+	}
+
+	&__item:nth-child(2):before {
+		@include bgImg(5-reasons, 2, png);
+		height: 163px;
+	}
+
+	&__footer {
+		.container {
+			z-index: 10;
+		}
+	}
+
+	&__footer::after {
+		position: absolute;
+		content: '';
+		background-position: center center;
+		background: url(../img/5-reasons/grafik.png) no-repeat center/cover;
+
+		@supports (background: url('../img/5-reasons/grafik.webp')) {
+			background-position: center center;
+			background: url('../img/5-reasons/grafik.webp') no-repeat center/cover;
+		}
+
+		;
+		bottom: 0;
+		min-width: 1920px;
+		width: 100%;
+		height: 604px;
+		z-index: -1;
+		@include adaptiv-value-in-min(left, 0, -450, 1144, 500);
+	}
+
+	&__footer-text {
+		@include mwidth(1435);
+		@include adaptiv-value(font-size, 24, 18, 0);
+		@include adaptiv-value(line-height, 36, 24, 0);
+		color: var(--white);
+
+		span {
+			@include fontGothamB();
+			@include adaptiv-value(font-size, 36, 24, 0);
+			@include adaptiv-value(line-height, 36, 24, 0);
+		}
+
+		margin-bottom: 70px;
+		padding-left: 350px;
+		position: relative;
+	}
+
+	&__footer-text::before {
+		position: absolute;
+		content: '';
+		@include bgImg(5-reasons, phone-left, png);
+		width: 290px;
+		height: 476px;
+		bottom: -69px;
+		left: 0;
+	}
+}

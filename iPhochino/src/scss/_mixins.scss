@@ -1,0 +1,100 @@
+// @include bgImg(6-history, bg, jpg);
+@mixin bgImg($folder, $img, $ext) {
+	background: url(../img/#{$folder}/#{$img}.#{$ext}) no-repeat center/cover;
+
+	@supports (background: url('../img/#{$folder}/#{$img}.webp')) {
+		background: url('../img/#{$folder}/#{$img}.webp') no-repeat center/cover;
+	}
+
+	;
+}
+
+// @include mwidth(855);
+@mixin mwidth($MW) {
+	max-width: #{$MW}px;
+	width: 100%;
+}
+
+// @include fontGothamR();
+@mixin fontGothamR() {
+	font-family: "GothamPro", sans-serif;
+	font-weight: 400;
+}
+
+// @include font_GothamB(26, 32);
+@mixin font_GothamB($size, $height) {
+	font-family: "GothamPro-Bold", sans-serif;
+	font-weight: 700;
+	font-size: #{$size}px;
+	line-height: #{$height};
+}
+
+// @include fontGothamB();
+@mixin fontGothamB() {
+	font-family: "GothamPro-Bold", sans-serif;
+	font-weight: 700;
+}
+
+//Адаптивное свойство
+@mixin adaptiv-value($property, $startSize, $minSize, $type) {
+	$addSize: $startSize - $minSize;
+
+	// @include adaptiv-value(margin-top, 90, 50, 1);
+	@if $type==1 {
+		//Только если меньше контейнера
+		#{$property}: $startSize + px;
+
+		@media (max-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+		}
+	}
+
+	// @include adaptiv-value(margin-top, 90, 50, 2);
+	@else if $type==2 {
+		//Только если больше контейнера
+		#{$property}: $startSize + px;
+
+		@media (min-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+		}
+	}
+
+	// @include adaptiv-value(margin-top, 90, 50, 0);
+	@else {
+		//Всегда
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+	}
+}
+
+//Адаптивное свойство внутри с определённого диапазона
+// @include adaptiv-value-in(margin-top, 90, 50, 1200);
+@mixin adaptiv-value-in($property, $startSize, $minSize, $maxWidthCont) {
+	$addSize: $startSize - $minSize;
+	#{$property}: $startSize + px;
+
+	@media (max-width: #{$maxWidthCont + px}) {
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthCont - 320}));
+	}
+}
+
+//Адаптивное свойство внутри определённого диапазона с ""maxWidthCont" до "minWidthCont"
+// @include adaptiv-value-in-min(margin-top, 110, 50, 1150, 560);
+@mixin adaptiv-value-in-min($property, $startSize, $minSize, $maxWidthCont, $minWidthCont) {
+	$addSize: $startSize - $minSize;
+	#{$property}: $startSize + px;
+
+	@media (max-width: #{$maxWidthCont + px}) {
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidthCont+ px}) / #{$maxWidthCont - $minWidthCont}));
+	}
+}
+
+//Адаптивное свойство с контейнера до "определённого минимального значения"
+// @include adaptiv-value-to(margin-top, 90, 50, 00);
+@mixin adaptiv-value-to($property, $startSize, $minSize, $minWidth) {
+	$addSize: $startSize - $minSize;
+	#{$property}: $minSize + px;
+
+	@media (min-width: #{$minWidth + px}) {
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * (((100vw - #{$minWidth + px})) / ((#{$maxWidth - $minWidth}))));
+	}
+}

@@ -1,0 +1,23 @@
+@media screen and (max-width: 550px) {
+	.specific__text {
+		font-size: 15px;
+		line-height: 22px;
+	}
+}
+
+@media screen and (max-width: 870px) {
+	.specific::after {
+		display: none;
+	}
+
+	.specific__content {
+		display: flex;
+		flex-direction: column;
+		max-width: 100%;
+
+	}
+
+	.specific__items-requests {
+		justify-content: center;
+	}
+}

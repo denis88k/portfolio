@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Франшиза - iPochino</title>
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		@include('_header.html')
+		<section class="gratitude bg-black">
+			<div class="container">
+				<div class="gratitude__inner">
+					<div class="gratitude__title title">
+						Александр, благодарим Вас <br> за обращение в компанию iPochino<sup>©</sup>
+					</div>
+					<div class="gratitude__subtitle">
+						Для обсуждения сотрудничества мы свяжемся с Вами в ближайшее время.
+					</div>
+					<div class="work-time">
+						<div class="work-time__img">
+							<img src="img/gratitude/workTime.jpg" alt="График работы">
+						</div>
+						<p class="work-time__text">
+							<span>График работы:</span>
+							<span>
+								С&nbsp;понедельника по&nbsp;пятницу по&nbsp;московскому времени: с&nbsp;09:00 до&nbsp;18:00
+								<br>Если Вы&nbsp;оставили заявку в&nbsp;нерабочее время или в&nbsp;выходной/праздничный
+								день&nbsp;&mdash; мы&nbsp;перезвоним Вам в&nbsp;ближайший рабочий день.
+							</span>
+						</p>
+					</div>
+					<button class="gratitude__btn btn">
+						ВЕРНУТЬСЯ НА ГЛАВНУЮ СТРАНИЦУ
+					</button>
+					<a class="gratitude__link line" href="#">
+						ПОСМОТРИТЕ НАШ САЙТ
+					</a>
+					<div class="gratitude__tagline">
+						iPochino: спасение и продление жизни устройств на iOS и Android
+					</div>
+				</div>
+				<div class="gratitude__founder">
+					<div class="gratitude__founder-img">
+						<img src="img/gratitude/founder.png"
+							alt="Владелец сети сервисных центров iPochino Сантурян Тигран Эдуардович">
+					</div>
+					<div class="gratitude__founder-text">
+						<span>Сантурян <br> Тигран Эдуардович,</span>
+						<span>владелец сети <br> сервисных центров iPochino</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		@include('_footer.html')
+	</div>
+</body>
+
+</html>

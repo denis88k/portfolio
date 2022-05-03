@@ -1,0 +1,37 @@
+@import 'vars';
+@import 'mixins';
+@import 'fonts';
+@import 'reset';
+@import 'libs';
+@import 'global';
+
+//components
+
+@import 'header';
+@import 'gratitude';
+@import '1-desc';
+@import '2-specific';
+@import '3-direct';
+@import '4-video';
+@import '5-reasons';
+@import '6-history';
+@import '7-shop';
+@import '8-finance';
+@import '9-calc';
+@import '10-offer';
+@import '11-island';
+@import '12-steps';
+@import '13-info';
+@import '14-call';
+@import 'footer';
+@import 'media_gratitude';
+@import 'media_1-desc';
+@import 'media_2-specific';
+@import 'media_5-reasons';
+@import 'media_7-shop';
+@import 'media_8-finance';
+@import 'media_9-calc';
+@import 'media_10-island';
+@import 'media_12-steps';
+@import 'media_13-info';
+@import 'media';

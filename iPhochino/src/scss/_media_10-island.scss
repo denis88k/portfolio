@@ -1,0 +1,57 @@
+@media screen and (max-width: 1060px) {
+   .island {
+      &__lists {
+         background: none;
+         height: auto;
+         display: flex;
+         flex-wrap: wrap;
+         gap: 20px;
+         justify-content: center;
+      }
+
+      &__item {
+         position: sticky;
+
+
+         span {
+            display: none;
+         }
+      }
+
+      &__item-dropdown {
+         opacity: 1;
+         margin: auto;
+         display: flex;
+         align-items: center;
+
+         &::before {
+            top: 60px;
+         }
+
+         &::after {
+            display: none;
+         }
+      }
+
+      @for $item from 1 through 5 {
+         &__item:nth-child(#{$item}) {
+            top: auto;
+            right: auto;
+            left: auto;
+
+            .island__item-dropdown {
+               @include mwidth(350);
+               height: 205px;
+            }
+         }
+      }
+
+      &__item:nth-child(4),
+      &__item:nth-child(5) {
+         .island__item-dropdown {
+            margin: 0;
+         }
+      }
+   }
+
+}

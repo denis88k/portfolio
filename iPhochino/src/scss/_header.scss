@@ -1,0 +1,59 @@
+.header {
+	position: absolute;
+	z-index: 1;
+	left: 0;
+	right: 0;
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin-top: 19px;
+	}
+
+	&__logo {
+		width: 153px;
+		height: 65px;
+	}
+
+	&__text {
+		font-size: 20px;
+		line-height: 26px;
+		letter-spacing: 0.5px;
+		text-align: center;
+		color: var(--white);
+		max-width: 457px;
+	}
+
+	&__tel-item {
+		span {
+			color: var(--white);
+		}
+	}
+
+	&__tel-link {
+		color: var(--red);
+	}
+}
+
+.tel-item {
+	text-align: center;
+
+	span {
+		@include fontGothamB();
+		font-size: 26px;
+		line-height: 31.2px;
+		margin-bottom: 10px;
+	}
+}
+
+.tel-link {
+	font-size: 14px;
+	line-height: 16.8px;
+	position: relative;
+}
+
+.tel-link::after {
+	background-color: var(--red);
+	bottom: -1px;
+}

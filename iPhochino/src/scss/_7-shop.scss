@@ -1,0 +1,139 @@
+.shop {
+	background-color: var(--grey-light);
+
+	&__inner {
+		display: flex;
+		justify-content: space-between;
+		@include adaptiv-value(margin-top, 110, 60, 1);
+		@include adaptiv-value(margin-bottom, 120, 50, 1);
+	}
+
+	&__item {
+		@include adaptiv-value(margin-left, 40, 30, 1);
+		position: relative;
+	}
+
+	&__item::before,
+	&__item::after {
+		position: absolute;
+		content: '';
+		display: block;
+		width: 15px;
+		height: 2.5px;
+		background-color: var(--red);
+		left: -40px;
+		@include adaptiv-value(left, -40, -22, 1);
+		top: 15px;
+		transition: transform .3s ease;
+	}
+
+	&__item::after {
+		transform: rotateZ(90deg);
+	}
+
+	&__item-title {
+		@include fontGothamB();
+		@include adaptiv-value(font-size, 20, 15, 1);
+		@include adaptiv-value(line-height, 30, 26, 1);
+		@include mwidth(275);
+	}
+
+	&__item-text {
+		@include adaptiv-value(font-size, 16, 12, 1);
+		@include adaptiv-value(line-height, 24, 18, 1);
+
+		span {
+			@include fontGothamB();
+		}
+	}
+
+	&-swiper__btn {
+		display: flex;
+	}
+}
+
+.swiper-text {
+	@include adaptiv-value(max-width, 325, 290, 1);
+	width: 100%;
+	@include adaptiv-value(margin-top, 20, 10, 1);
+	@include adaptiv-value(margin-bottom, 20, 10, 1);
+	margin-left: 0;
+}
+
+.swiper-img .swiper-wrapper {
+	@include adaptiv-value-in-min(max-width, 752, 370, 1144, 775);
+	width: 100%;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	position: relative;
+	width: auto;
+	height: auto;
+	transition: all .1s linear;
+	margin: 0;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+	transform: scale(1.1);
+}
+
+.swiper-button-prev:active,
+.swiper-button-next:active {
+	transform: scale(0.9);
+}
+
+.swiper-button-prev {
+	left: 0;
+	margin-right: 30px;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+	content: '';
+	display: block;
+	width: 40px;
+	height: 40px;
+}
+
+.swiper-button-prev::after {
+	@include bgImg(7-shop, btn-prev, png);
+}
+
+.swiper-button-next::after {
+	@include bgImg(7-shop, btn-next, png);
+}
+
+.swiper-button-next {
+	right: 0;
+}
+
+.shop__item .swiper-text,
+.shop__item .shop-swiper__btn,
+.swiper-img {
+	position: absolute;
+	opacity: 0;
+	visibility: hidden;
+	transition: all .1s ease;
+}
+
+.shop__item-active .swiper-text,
+.shop__item-active .shop-swiper__btn,
+.swiper-img-active {
+	position: static;
+	opacity: 1;
+	visibility: visible;
+}
+
+.shop__item:not(:last-child) {
+	@include adaptiv-value(margin-bottom, 23, 15, 1);
+}
+
+.shop__item-active:not(:last-child) {
+	@include adaptiv-value(margin-bottom, 50, 30, 1);
+}
+
+.shop__item-active::after {
+	transform: rotateZ(0);
+}

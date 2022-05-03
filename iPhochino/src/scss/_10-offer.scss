@@ -1,0 +1,52 @@
+.offer {
+
+   &__title {
+      color: var(--black);
+      @include mwidth(1100);
+      margin: 0 auto;
+   }
+
+   &__lists {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+      @include adaptiv-value(margin-top, 45, 30, 1);
+      @include adaptiv-value(margin-bottom, 35, 20, 1);
+   }
+
+   &__item {
+      @include mwidth(557);
+   }
+
+   &__item-content {
+      @include adaptiv-value(padding-left, 45, 30, 1);
+      @include adaptiv-value(padding-right, 45, 30, 1);
+      border: 1px solid #e0e0e0;
+      min-height: 223px;
+
+      span {
+         @include fontGothamB();
+         @include adaptiv-value(font-size, 40, 32, 1);
+         line-height: .75;
+         color: var(--red);
+      }
+   }
+
+   &__item-title {
+      @include fontGothamB();
+      @include adaptiv-value(font-size, 24, 18, 1);
+      @include adaptiv-value(line-height, 36, 26, 1);
+      @include adaptiv-value(margin-top, 15, 5, 1);
+      @include adaptiv-value(margin-bottom, 20, 10, 1);
+   }
+
+   &__item-text {
+      @include adaptiv-value(font-size, 18, 15, 1);
+      @include adaptiv-value(line-height, 26, 22, 1);
+   }
+
+   &__form-title {
+      color: var(--black);
+   }
+}

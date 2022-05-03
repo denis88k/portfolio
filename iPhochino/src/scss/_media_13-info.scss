@@ -1,0 +1,42 @@
+@media screen and (max-width: 1175px) {
+   .info {
+      &__item-img {
+         display: none;
+      }
+
+      &__item-text {
+         margin: 20px 0;
+      }
+
+      &__item:nth-child(2) {
+         .info__item-content::after {
+            display: block;
+         }
+      }
+
+      &__item:nth-child(3),
+      &__item:nth-child(4),
+      &__item:nth-child(5),
+      &__item:nth-child(6),
+      &__item:nth-child(7) {
+         .info__item-content {
+            width: 100%;
+         }
+      }
+
+      &__item:nth-child(4),
+      &__item:nth-child(5) {
+         .info__item-content {
+            &::before {
+               display: none;
+            }
+         }
+      }
+
+      &__item:nth-child(5) {
+         .info__item-content {
+            margin-left: 0;
+         }
+      }
+   }
+}

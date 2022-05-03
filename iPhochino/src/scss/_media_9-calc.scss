@@ -1,0 +1,25 @@
+@media screen and (max-width: 1136px) {
+   .calc__phone {
+      top: 100px;
+   }
+}
+
+@media screen and (max-width: 815px) {
+   .calc__title {
+      text-align: center;
+   }
+
+   .calc__phone,
+   .calc::before {
+      display: none;
+   }
+
+   .calc__lists {
+      margin-right: auto;
+   }
+
+   .calc__profit-text {
+      display: flex;
+      flex-direction: column;
+   }
+}

@@ -1,0 +1,151 @@
+//переменные
+$minwidth: 320px;
+$pd: 30px;
+$maxWidth: 1920;
+$maxWidthContainer: 1144;
+$md1: $maxWidthContainer+$pd;
+
+html,
+body {
+	height: 100%;
+	min-width: $minwidth;
+}
+
+body {
+	@include fontGothamR();
+	position: relative;
+
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.container {
+	max-width: $md1;
+	margin: 0 auto;
+	padding: 0 calc($pd/2);
+}
+
+.main,
+.gratitude {
+	flex: 1 1 auto;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer {
+	flex: 0 0 auto;
+}
+
+.bg-black {
+	background: url(../img/bg-header.jpg) no-repeat center/cover;
+
+	@supports (background: url('../img/bg-header.webp')) {
+		background: url('../img/bg-header.webp') no-repeat center/cover;
+	}
+
+	;
+	padding-top: 84px;
+	height: 100%;
+	width: 100%;
+}
+
+.line::after {
+	position: absolute;
+	content: '';
+	height: 1px;
+	width: 100%;
+	left: 0;
+	margin: 0 auto;
+}
+
+.title {
+	@include fontGothamB;
+	@include adaptiv-value(font-size, 40, 25, 1);
+	line-height: 1.2;
+	letter-spacing: 1px;
+	color: var(--white);
+	text-align: center;
+
+	&-red {
+		color: var(--red);
+	}
+
+	&-red_bg {
+		background-color: var(--red);
+	}
+}
+
+.subtitle {
+	@include fontGothamB();
+	@include adaptiv-value(font-size, 30, 22, 1);
+	@include adaptiv-value(line-height, 42, 26, 1);
+	text-align: center;
+}
+
+.text {
+	font-size: 18px;
+	line-height: 26px;
+}
+
+.btn {
+	@include fontGothamB();
+	@include adaptiv-value(font-size, 16, 14, 1);
+	letter-spacing: 0.45px;
+	line-height: 1;
+	text-align: center;
+	text-transform: uppercase;
+	color: var(--white);
+	border-radius: 4px;
+	box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.22);
+	background-image: linear-gradient(to right, #ee0787 0%, #fbb438 100%);
+	padding: 26px 7px;
+	cursor: pointer;
+	transition: all .5s ease;
+	position: relative;
+	overflow: hidden;
+
+	&::before {
+		position: absolute;
+		content: '';
+		width: 180px;
+		height: 20px;
+		background-color: rgba(255, 255, 255, 0.411);
+		top: 40%;
+		left: -35%;
+		transform: rotate(115deg);
+		animation: animate_btn 4s ease-in-out infinite;
+	}
+}
+
+@keyframes animate_btn {
+	0% {
+		left: -35%;
+	}
+
+	50%,
+	to {
+		left: 100%;
+	}
+}
+
+.btn:hover {
+	background-image: linear-gradient(to right, #f2387a, #ffcc51);
+	transform: scale(1.05);
+}
+
+.btn:active {
+	transform: scale(.95);
+}
