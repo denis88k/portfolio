@@ -1,0 +1,104 @@
+.subscribe {
+
+   &__inner {
+      @include adaptiv-value(margin-top, 85, 30, 1);
+      margin-bottom: 50px;
+   }
+
+   &__title {
+      color: var(--bg-black-header);
+   }
+
+   &__subtitle {
+      @include adaptiv-value(margin-top, 30, 20, 1);
+      margin-bottom: 25px;
+      // @include adaptiv-value(margin-bottom, 25, 20, 1);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: var(--bg-black-header);
+   }
+}
+
+.form {
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      gap: 25px;
+      // @include adaptiv-value(gap, 20, 10, 1);
+      align-content: flex-start;
+      height: 125px;
+      // height: 170px;
+   }
+
+   .error {
+      height: 170px;
+   }
+
+   &__item {
+      @include mwidth(400);
+      display: flex;
+      flex-direction: column-reverse;
+      position: relative;
+   }
+
+   &__input {
+      padding-left: 20px;
+      outline: none;
+      color: var(--bg-black-header);
+   }
+
+   &__input::placeholder {
+      color: rgba(0, 0, 0, 0.6);
+   }
+
+   &__input:active,
+   &__input:focus {
+      border: 1px solid var(--bg-black);
+   }
+
+   &__input {
+      @include mwidth(400);
+   }
+
+   &__input,
+   &__item-btn {
+      border: 1px solid rgba(0, 0, 0, 0.4);
+      border-radius: 10px;
+      height: 50px;
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 20px;
+   }
+
+
+
+   &__item-btn {
+      @include adaptiv-value(margin-top, 20, 10, 1);
+      font-size: 16px;
+      justify-content: center;
+      width: 141px;
+      cursor: pointer;
+      color: var(--bg-black-header);
+      background-color: transparent;
+      transition: background-color .3s ease;
+   }
+
+   &__item-btn:hover {
+      background-color: var(--hover);
+   }
+}
+
+.just-validate-error-label {
+   position: absolute;
+   top: -23.75px;
+   left: 21px;
+}
+
+::-webkit-calendar-picker-indicator {
+   opacity: 0;
+}

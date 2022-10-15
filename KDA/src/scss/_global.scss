@@ -1,0 +1,72 @@
+//переменные
+$minwidth: 320px;
+$pd: 30px;
+$maxWidth: 1440;
+$maxWidthContainer: 1240;
+$md1: $maxWidthContainer+$pd;
+
+html,
+body {
+	height: 100%;
+	min-width: $minwidth;
+}
+
+body {
+	position: relative;
+
+	&.lock {
+		overflow: hidden;
+	}
+}
+
+.wrapper {
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.container {
+	max-width: $md1;
+	margin: 0 auto;
+	padding: 0 calc($pd/2);
+}
+
+.main,
+.gratitude {
+	flex: 1 1 auto;
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+}
+
+.footer {
+	flex: 0 0 auto;
+}
+
+* {
+	font-family: 'M PLUS 1p', sans-serif;
+	color: var(--white);
+}
+
+.bg-b {
+	&-header {
+		background-color: var(--bg-black-header);
+	}
+}
+
+.text {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+.title {
+	@include adaptiv-value(font-size, 80, 40, 1);
+	font-weight: 500;
+	line-height: 85px;
+}

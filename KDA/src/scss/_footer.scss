@@ -1,0 +1,43 @@
+.footer {
+	background-color: #312F35;
+
+	&__inner {
+		@include adaptiv-value(margin-top, 50, 80, 1);
+		@include adaptiv-value(margin-bottom, 80, 167, 1);
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		align-content: flex-start;
+		align-items: flex-start;
+		height: 125px;
+	}
+
+	&__desc {
+		font-weight: 500;
+		@include mwidth(400);
+		@include adaptiv-value(margin-right, 167, 50, 1);
+
+		p:first-child {
+			font-size: 16px;
+			line-height: 24px;
+		}
+
+		p:last-child {
+			font-size: 14px;
+			line-height: 21px;
+			margin-top: 10px;
+			margin-bottom: 25px;
+		}
+	}
+
+	&__social {
+		display: flex;
+		align-items: center;
+		gap: 30px;
+	}
+
+	&__social a,
+	&__social a svg {
+		height: 100%;
+	}
+}

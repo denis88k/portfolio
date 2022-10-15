@@ -1,0 +1,48 @@
+.faq {
+
+   &__inner {
+      display: flex;
+      flex-wrap: wrap;
+      @include adaptiv-value(margin-top, 150, 50, 1);
+      column-gap: 98px;
+      row-gap: 40px;
+   }
+}
+
+.accordion {
+   border-top: 1px solid var(--white);
+   @include mwidth(983);
+}
+
+.accordion-item {
+   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+   padding: 30px 0;
+
+   &__title {
+      font-family: 'M PLUS 1', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      line-height: 35px;
+      transition: margin-bottom .3s ease-in;
+      cursor: pointer;
+   }
+
+   &__text {
+      font-weight: 400;
+      @include mwidth(730);
+      position: absolute;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity .5s ease-in-out;
+   }
+
+   &-active .accordion-item__title {
+      margin-bottom: 30px;
+   }
+
+   &-active .accordion-item__text {
+      position: relative;
+      opacity: 1;
+      visibility: visible;
+   }
+}

@@ -1,0 +1,14 @@
+.main {
+	@include adaptiv-value(margin-top, 212, 95, 1);
+
+	&-header {
+		filter: brightness(40%);
+	}
+}
+
+.header,
+.slider,
+.faq,
+.news {
+	background-color: var(--bg-black);
+}
