@@ -1,0 +1,75 @@
+// @include bgImg(history, phone, png);
+@mixin bgImg($img, $ext) {
+	background: url(../img/#{$img}.#{$ext}) no-repeat center/cover;
+
+	@supports (background: url('../img/#{$img}.webp')) {
+		background: url('../img/#{$img}.webp') no-repeat center/cover;
+	}
+
+	;
+}
+
+// @include mwidth(1087);
+@mixin mwidth($MW) {
+	max-width: #{$MW}px;
+	width: 100%;
+}
+
+// @include adaptiv-value(margin-top, 90, 50, 1);
+//Адаптивное свойство
+@mixin adaptiv-value($property, $startSize, $minSize, $type) {
+	$addSize: $startSize - $minSize;
+
+	@if $type==1 {
+		//Только если меньше контейнера
+		#{$property}: $startSize + px;
+
+		@media (max-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthContainer - 320}));
+		}
+	}
+
+	@else if $type==2 {
+		//Только если больше контейнера
+		#{$property}: $startSize + px;
+
+		@media (min-width: #{$maxWidthContainer + px}) {
+			#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+		}
+	}
+
+	@else {
+		//Всегда
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
+	}
+}
+
+//Адаптивное свойство внутри с определённого диапазона
+@mixin adaptiv-value-in($property, $startSize, $minSize, $maxWidthCont) {
+	$addSize: $startSize - $minSize;
+	#{$property}: $startSize + px;
+
+	@media (max-width: #{$maxWidthCont + px}) {
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidthCont - 320}));
+	}
+}
+
+//Адаптивное свойство внутри определённого диапазона начиная с maxWidthCont до minWidthCont
+@mixin adaptiv-value-in-min($property, $startSize, $minSize, $maxWidthCont, $minWidthCont) {
+	$addSize: $startSize - $minSize;
+	#{$property}: $startSize + px;
+
+	@media (max-width: #{$maxWidthCont + px}) {
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - #{$minWidthCont + px}) / #{$maxWidthCont - $minWidthCont}));
+	}
+}
+
+//Адаптивное свойство до
+@mixin adaptiv-value-to($property, $startSize, $minSize, $minWidth) {
+	$addSize: $startSize - $minSize;
+	#{$property}: $minSize + px;
+
+	@media (min-width: #{$minWidth + px}) {
+		#{$property}: calc(#{$minSize + px} + #{$addSize} * (((100vw - #{$minWidth + px})) / ((#{$maxWidth - $minWidth}))));
+	}
+}

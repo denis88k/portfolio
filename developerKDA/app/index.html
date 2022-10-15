@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Developer Test</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+
+	<div class="wrapper">
+		<header class="header">
+	<div class="container">
+		<div class="header__inner">
+
+			<div class="tagline">
+				<span>учимся</span>
+				<span>Онлайн</span>
+				<svg class="tagline-icon" width="25" height="25">
+					<use href="img/sprite.svg#iconGrad"></use>
+				</svg>
+			</div>
+
+			<div class="menu__btn">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+
+			<ul class="nav-links">
+
+				<li class="nav__item">
+					<a class="nav__link" href="#" id="nav__link-active">Новичкам</a>
+					<ul class="drop-menu">
+						<li><a href="#">Дизайн</a></li>
+						<li><a href="#">Аналитика</a></li>
+						<li><a href="#">Маркетинг</a></li>
+						<li><a href="#">Программирование</a></li>
+					</ul>
+				</li>
+
+				<li class="nav__item">
+					<a class="nav__link" href="#" id="nav__link-active">Специалистам</a>
+					<ul class="drop-menu">
+						<li><a href="#">Дизайн</a></li>
+						<li><a href="#">Аналитика</a></li>
+						<li><a href="#">Маркетинг</a></li>
+						<li><a href="#">Программирование</a></li>
+					</ul>
+				</li>
+
+				<li class="nav__item">
+					<a class="nav__link" href="#" id="nav__link-active">Руководителям</a>
+					<ul class="drop-menu">
+						<li><a href="#">Стратегия</a></li>
+						<li><a href="#">Цифровые финансы</a></li>
+						<li><a href="#">Цифровой маркетинг</a></li>
+						<li><a href="#">Бизнес и управление</a></li>
+					</ul>
+				</li>
+
+			</ul>
+
+		</div>
+	</div>
+</header>
+		<main class="main">
+			<section class="slider">
+	<div class="swiper">
+		<div class="swiper-wrapper">
+			<div class="swiper-slide swiper-slide1">
+				<div class="container">
+					<div class="swiper-slide__inner">
+						<div class="slide__text">
+							<span>Новичок</span>
+							<h1 class="slide__title">
+								Сделайте шаг<br> к новой профессии
+							</h1>
+							<div class="slide__subtitle">
+								Курсы, которые помогут освоить востребованную профессию
+								с нуля или изучить новую специализацию
+							</div>
+						</div>
+						<button class="slide__btn btn">Подробнее</button>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide swiper-slide2">
+				<div class="container">
+					<div class="swiper-slide__inner">
+						<div class="slide__text">
+							<span>Специалисты</span>
+							<h1 class="slide__title">
+								Сделайте шаг<br> к росту карьеры
+							</h1>
+							<div class="slide__subtitle">
+								Курсы для специалистов с опытом, чтобы развиваться в профессии и открывать новые возможности в
+								карьере
+							</div>
+						</div>
+						<button class="slide__btn btn">Подробнее</button>
+					</div>
+				</div>
+			</div>
+			<div class="swiper-slide swiper-slide3">
+				<div class="container">
+					<div class="swiper-slide__inner">
+						<div class="slide__text">
+							<span>Руководители</span>
+							<h1 class="slide__title">
+								Сделайте шаг<br> к новым решениям
+							</h1>
+							<div class="slide__subtitle">
+								Курсы для руководителей, чтобы развивать управленческие навыки и растить бизнес
+							</div>
+						</div>
+						<button class="slide__btn btn">Подробнее</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="slider__btn">
+			<div class="swiper-button-prev">
+				<svg class="arrowPrev" width="28" height="50">
+					<use href="img/sprite.svg#arrowPrev"></use>
+				</svg>
+				<svg class="arrowPrevHover" width="50" height="50">
+					<use href="img/sprite.svg#arrowPrevHover"></use>
+				</svg>
+			</div>
+			<div class="swiper-button-next">
+				<svg class="arrowNextHover" width="50" height="50">
+					<use href="img/sprite.svg#arrowNextHover"></use>
+				</svg>
+				<svg class="arrowNext" width="28" height="50">
+					<use href="img/sprite.svg#arrowNext"></use>
+				</svg>
+			</div>
+		</div>
+		<div class="pagination">
+			<div class="container">
+				<div class="swiper-pagination">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+			<section class="content">
+   <div class="container">
+      <div class="content__inner">
+
+         <ul class="content__list">
+
+            <li class="content__item">
+               <svg class="item-icon">
+                  <use href="img/sprite.svg#icon1"></use>
+               </svg>
+               <h3 class="content__title">
+                  Получите <br><span>профессию</span>
+               </h3>
+               <p class="content__text">
+                  Базовые курсы для изучения новой сферы
+                  или профессии — с практикой и помощью
+                  в трудоустройстве
+               </p>
+            </li>
+
+            <li class="content__item">
+               <svg class="item-icon">
+                  <use href="img/sprite.svg#icon2"></use>
+               </svg>
+               <h3 class="content__title">
+                  Растите <br><span>в профессии</span>
+               </h3>
+               <p class="content__text">
+                  Курсы продвинутого уровня для тех, кто хочет усилить позиции в текущей профессии, вырасти
+                  в доходе, изучить новые инструменты
+               </p>
+            </li>
+
+            <li class="content__item">
+               <svg class="item-icon" width="65" height="63">
+                  <use href="img/sprite.svg#icon3"></use>
+               </svg>
+               <h3 class="content__title">
+                  Управляйте <br><span>эффективно</span>
+               </h3>
+               <p class="content__text">
+                  Курсы для руководителей, чтобы научиться эффективно решать сложные задачи
+                  в управлении командой и бизнесом
+               </p>
+            </li>
+         </ul>
+      </div>
+   </div>
+</section>
+			<section class="form">
+   <div class="container">
+      <div class="form__inner">
+
+         <div class="form__content">
+            <h2 class="form__title">
+               Сделайте шаг <br>к новой профессии
+            </h2>
+            <p class="form__subtitle">
+               Расскажите нам
+               о своих целях и мы поможем выбрать подходящую программу.
+            </p>
+         </div>
+
+         <form class="form__request" action="#">
+            <div class="form__list">
+               <label class="form__item">
+                  <input class="form__input input-name" type="text" name="Имя" placeholder="Вас зовут">
+               </label>
+               <label class="form__item">
+                  <input class="form__input input-tel" type="tel" name="Телефон" placeholder="+7(000) 000-00-00">
+               </label>
+               <button class="form__item-btn btn">Оставить заявку</button>
+            </div>
+
+            <p class="form__policy">
+               Отправляя заявку, я соглашаюсь на обработку <span>персональных данных</span>
+            </p>
+         </form>
+
+      </div>
+   </div>
+</section>
+
+		</main>
+
+		<footer class="footer">
+	<div class="container">
+		<div class="footer__inner">
+
+			<div class="tagline">
+				<span>учимся</span>
+
+				<span>Онлайн</span>
+				<svg class="tagline-icon" width="25" height="25">
+					<use href="img/sprite.svg#iconGrad"></use>
+				</svg>
+			</div>
+
+		</div>
+	</div>
+</footer>
+
+	</div>
+
+	<script src="js/vendors.min.js"></script>
+<script src="js/app.min.js"></script>
+
+</body>
+
+</html>

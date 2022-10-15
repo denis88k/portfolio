@@ -1,0 +1,42 @@
+.tagline {
+   display: flex;
+   align-items: center;
+
+   span {
+      font-size: 22px;
+      line-height: 120%;
+   }
+
+   span:nth-child(1) {
+      font-weight: 300;
+      color: var(--white);
+      margin-right: 5px;
+   }
+
+   span:nth-child(2) {
+      font-weight: 500;
+      order: 1;
+   }
+}
+
+.footer__inner {
+   .tagline {
+      span:nth-child(2) {
+         color: var(--green-light);
+      }
+   }
+}
+
+.tagline-icon {
+   fill: var(--white);
+   margin-right: 5px;
+}
+
+.main {
+   transition: all .3s ease;
+
+   &-bg {
+      filter: brightness(40%);
+      opacity: 0.9;
+   }
+}

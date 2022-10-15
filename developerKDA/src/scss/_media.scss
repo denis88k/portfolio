@@ -1,0 +1,265 @@
+@media screen and (max-width: 1630px) {
+	.content {
+		&__list {
+			justify-content: center;
+		}
+	}
+}
+
+@media screen and (max-width: 1465px) {
+	.form__item-btn {
+		width: 575px;
+	}
+
+	.form__request {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.form__list {
+		justify-content: center;
+	}
+
+	.form__policy {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width: 1140px) {
+	.form__item-btn {
+		width: 275px;
+	}
+}
+
+@media screen and (max-width: 1080px) {
+	.content {
+		&__item {
+			height: auto;
+		}
+
+		&__item:nth-child(1),
+		&__item:nth-child(2) {
+			border-right: none;
+			border-bottom: 1px solid #F2F2F2;
+			padding-bottom: 30px;
+		}
+	}
+
+	.footer__inner {
+		justify-content: center;
+	}
+}
+
+@media screen and (max-width: 905px) {
+	.form__item-btn {
+		width: 575px;
+	}
+}
+
+@media screen and (max-width: 1020px) {
+	.form__inner {
+		flex-wrap: wrap;
+	}
+}
+
+@media screen and (max-width: 604px) {
+
+	.form__item,
+	.form__item-btn {
+		@include mwidth(344);
+	}
+}
+
+@media screen and (max-width: 1325px) {}
+
+.nav-links {
+	margin-right: 20px;
+}
+
+@media screen and (max-width: 970px) {
+
+	/* кнопка */
+	.menu__btn {
+		display: block;
+		position: absolute;
+		right: 15px;
+		width: 45px;
+		height: 29px;
+		cursor: pointer;
+		z-index: 5;
+	}
+
+	.menu__btn span {
+		top: 13px;
+		right: 0px;
+		position: absolute;
+		width: 100%;
+		height: 3px;
+		background-color: var(--white);
+		transition: all .3s ease;
+	}
+
+	.menu__btn span:first-child {
+		top: 0px;
+	}
+
+	.menu__btn span:last-child {
+		bottom: 0px;
+		top: auto;
+	}
+
+	.menu__btn-active span {
+		transform: scale(0);
+		background-color: var(--dark);
+	}
+
+	.menu__btn-active span:first-child {
+		transform: translateY(13px) rotate(45deg);
+	}
+
+	.menu__btn-active span:last-child {
+		width: 100%;
+		transform: translateY(-13px) rotate(-45deg);
+	}
+
+	/* меню */
+	.nav__item:hover::after {
+		display: none;
+	}
+
+	.nav-links {
+		margin-right: 0;
+		position: fixed;
+		height: 100vh;
+		max-width: 335px;
+		width: 100%;
+		top: 0;
+		right: 0;
+		background: var(--white);
+		display: block;
+		padding: 180px 35px 235px 45px;
+		overflow-y: auto;
+		transform: translateX(100%);
+		transition: all .3s ease;
+	}
+
+	.nav-links-active {
+		transform: translateX(0);
+	}
+
+	.nav-links>li:not(:last-child) {
+		padding-bottom: 40px;
+		border-bottom: 1px solid #F2F2F2;
+	}
+
+	.nav-links>li:nth-child(2),
+	.nav-links>li:nth-child(3) {
+		margin-top: 40px;
+	}
+
+	.nav__link {
+		font-weight: 500;
+		font-size: 26px;
+		line-height: 115%;
+		color: var(--dark);
+		display: flex;
+		align-items: center;
+	}
+
+	li a.nav__link-active {
+		color: var(--green-light);
+	}
+
+	li a.nav__link-active#nav__link-active {
+		padding-bottom: 23px !important;
+		overflow: hidden;
+	}
+
+	.nav__link::before,
+	.nav__link::after {
+		position: absolute;
+		content: '';
+		right: 0;
+		height: 1.33px;
+		width: 19px;
+		background-color: #C4C4C4;
+		transition: all .4s ease;
+	}
+
+	.nav__link::before {
+		transform: rotate(90deg);
+	}
+
+	.nav__link-active::before {
+		transform: rotate(0deg);
+	}
+
+	/* выпадающее меню */
+	.drop-menu li>a {
+		color: var(--grey);
+	}
+
+	.drop-menu li:not(:last-child) {
+		margin-bottom: 15px;
+	}
+
+	#nav__link-active+.drop-menu {
+		opacity: 0;
+		visibility: hidden;
+		top: auto;
+		width: 100%;
+		overflow: hidden;
+		transition: all .3s ease -.1s;
+		overflow: hidden;
+	}
+
+	.nav__item:hover .nav__link {
+		padding-bottom: 0 !important;
+
+	}
+
+	.nav__link-active+.drop-menu {
+		top: auto !important;
+		opacity: 1 !important;
+		visibility: visible !important;
+		position: relative;
+	}
+}
+
+@media screen and (max-width: 880px) {
+	.swiper {
+		&-slide__inner {
+			flex-direction: column;
+		}
+	}
+
+	.slide {
+		&__btn {
+			align-self: flex-start;
+			margin-top: 30px;
+		}
+	}
+}
+
+@media screen and (max-width: 700px) {
+	.slider__btn {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 375px) {
+	.swiper {
+		&-slide1 {
+			@include bgImg(bg-m1, png);
+		}
+
+		&-slide2 {
+			@include bgImg(bg-m2, png);
+		}
+
+		&-slide3 {
+			@include bgImg(bg-m3, png);
+		}
+	}
+}
