@@ -70,8 +70,7 @@ function getShuffled(sizeFrame) {
 
         if (isValid) {
           tilesMoveArr.push([tilesTargetIndex, tilesTarget]);
-          // tilesMoveArr.push([tilesTargetIndex, tilesTarget, tilesTargetCoord, diffCoordX, diffCoordY]);
-          // 0-индекс плитки, 1-значение плитки, 2-объект с коорд.плиток, 3-разница по x, 4-разница по y
+          // 0-индекс плитки, 1-значение плитки
         }
       }
     });
