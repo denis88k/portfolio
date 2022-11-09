@@ -135,9 +135,7 @@ function getShuffled(sizeFrame) {
 
 // массив перемешанный, к которому будем обращаться и менять значение
 let arrShuffled = getShuffled(sizeFrame);
-// arrShuffled = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16];
 const field = document.querySelector('.field');
-
 
 // ====проверка есть ли сохранённая игра в localStorage====
 // вытаскиваем данные из localStorage, если игру сохранили и эти данные покажутся после загрузки страницы
@@ -248,8 +246,6 @@ function sizeChanges() {
       sizeFrame = +el.dataset.size;
       // вставляем размер поля
       document.querySelector('.size').innerHTML = ` ${sizeFrame} x ${sizeFrame}`;
-      //собираем массив перемешанный исходя из размера поля
-      // arrShuffled = getShuffled(sizeFrame);
       // перезапуск
       restartGame(sizeFrame, arrShuffled, field, countMove);
     });
@@ -310,18 +306,8 @@ function fieldListener(field, e) {
         if (e.propertyName === 'transform') {
           arrShuffled[tilesEmptyIndex] = +tilesClick.dataset.numb;
           arrShuffled[tilesClickIndex] = +tilesEmpty.dataset.numb;
-          // arrShuffled = arrShuffled.map((el, index) => {
-          //   if (index === tilesEmptyIndex) {
-          //     return el = (+tilesClick.dataset.numb);
-          //   }
-          //   if (index === tilesClickIndex) {
-          //     return el = (+tilesEmpty.dataset.numb);
-          //   }
-          //   return el;
-          // });
           // проверка выигрыша
           isWin(arrShuffled);
-
           return arrShuffled;
         };
       });
